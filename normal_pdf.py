@@ -1,8 +1,8 @@
-import math
+import numpy as np
 from matplotlib import pyplot as plt
 
 def normal_pdf(x, mu=0, sigma=1):
-    ans = (1.0/math.sqrt(2*math.pi*(sigma**2)))*(math.exp((-(x-mu)**2)/2*(sigma**2)))
+    ans = 1/np.sqrt(2*np.pi*sigma**2) * np.exp(-((x-mu)**2)/(2*sigma**2))
     return ans
     
 xs = [x / 10.0 for x in range(-50, 50)]
